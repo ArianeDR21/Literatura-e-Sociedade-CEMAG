@@ -1,0 +1,2965 @@
+/* =====================================================
+   LITERATURA E SOCIEDADE — CSS ORGANIZADO
+   ===================================================== */
+
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
+:root {
+
+    --vinho: #641f2c;
+    --vinho-escuro: #39131b;
+    --vinho-claro: #8b3545;
+
+    --creme: #f4eee3;
+    --papel: #fbf8f1;
+
+    --dourado: #b18a4a;
+    --marrom: #3a2923;
+
+    --cinza: #716a63;
+    --preto: #191615;
+
+    --transicao: all 0.4s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: var(--preto);
+
+    background: var(--papel);
+
+    line-height: 1.7;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+.container {
+
+    width: min(1180px, 90%);
+
+    margin: auto;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.cabecalho {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: rgba(25, 22, 21, 0.96);
+
+    color: white;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 6px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+}
+
+
+.logo-e {
+
+    color: var(--dourado);
+
+    font-style: italic;
+}
+
+
+.menu {
+
+    display: flex;
+
+    gap: 25px;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.menu a {
+
+    position: relative;
+
+    transition: var(--transicao);
+}
+
+
+.menu a:hover {
+
+    color: var(--dourado);
+}
+
+
+.menu-mobile {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    height: 100vh;
+
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            rgba(38, 15, 20, .75),
+            rgba(38, 15, 20, .88)
+        ),
+
+        url("imagens/capa.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    padding: 30px;
+}
+
+
+.edicao {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #d8bd8a;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(65px, 10vw, 130px);
+
+    line-height: .8;
+
+    font-weight: 500;
+}
+
+
+.hero h1 span {
+
+    color: var(--dourado);
+
+    font-style: italic;
+
+    font-size: .55em;
+}
+
+
+.linha-decorativa {
+
+    width: 100px;
+
+    height: 1px;
+
+    background: var(--dourado);
+
+    margin: 35px auto;
+}
+
+
+.subtitulo {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+    line-height: 1.4;
+
+    font-style: italic;
+}
+
+
+.botao {
+
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 15px 32px;
+
+    border: 1px solid #d8bd8a;
+
+    color: white;
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: var(--transicao);
+}
+
+
+.botao:hover {
+
+    background: var(--dourado);
+
+    color: var(--preto);
+}
+
+
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    font-size: 25px;
+
+    animation: subirDescer 1.5s infinite;
+}
+
+
+@keyframes subirDescer {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
+/* ==========================================
+   SEÇÕES
+========================================== */
+
+.secao {
+
+    padding: 120px 0;
+}
+
+
+.titulo-secao {
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 70px;
+}
+
+
+.numero {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 70px;
+
+    color: var(--dourado);
+
+    line-height: 1;
+}
+
+
+.etiqueta {
+
+    color: var(--vinho);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    line-height: 1;
+
+    font-weight: 500;
+}
+
+
+h3, h4 {
+
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+/* ==========================================
+   APRESENTAÇÃO
+========================================== */
+
+.apresentacao {
+
+    background: var(--papel);
+}
+
+
+.apresentacao-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.3fr .7fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.texto {
+
+    font-size: 16px;
+
+    color: var(--cinza);
+}
+
+
+.texto p {
+
+    margin-bottom: 22px;
+}
+
+
+.texto .destaque {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 28px;
+
+    line-height: 1.4;
+
+    color: var(--marrom);
+}
+
+
+.citacao {
+
+    padding: 55px 40px;
+
+    background: var(--creme);
+
+    border-left: 4px solid var(--dourado);
+
+    text-align: center;
+}
+
+
+.aspas {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 90px;
+
+    line-height: .5;
+
+    color: var(--dourado);
+}
+
+
+.citacao blockquote {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 31px;
+
+    font-style: italic;
+
+    margin: 30px 0;
+}
+
+
+.citacao-linha {
+
+    width: 50px;
+
+    height: 1px;
+
+    background: var(--dourado);
+
+    margin: auto;
+}
+
+
+.citacao p {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   OBJETIVOS
+========================================== */
+
+.objetivos {
+
+    background: var(--creme);
+}
+
+
+.titulo-centralizado {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto 65px;
+}
+
+
+.titulo-centralizado > p:last-child {
+
+    color: var(--cinza);
+
+    margin-top: 20px;
+}
+
+
+.cards-objetivos {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.card-objetivo {
+
+    padding: 40px 28px;
+
+    background: var(--papel);
+
+    text-align: center;
+
+    transition: var(--transicao);
+
+    border-bottom: 2px solid transparent;
+}
+
+
+.card-objetivo:hover {
+
+    transform: translateY(-10px);
+
+    border-color: var(--dourado);
+}
+
+
+.icone {
+
+    font-size: 35px;
+
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+
+.card-objetivo h3 {
+
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+
+.card-objetivo p {
+
+    font-size: 13px;
+
+    color: var(--cinza);
+}
+
+
+/* ==========================================
+   DRUMMOND
+========================================== */
+
+.drummond {
+
+    background: var(--vinho-escuro);
+
+    color: white;
+}
+
+
+.drummond .etiqueta {
+
+    color: #d8bd8a;
+}
+
+
+.drummond-grid {
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.imagem-placeholder {
+
+    width: 100%;
+
+    min-height: 400px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #3b2225,
+            #201516
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #cbb896;
+
+    text-align: center;
+
+    border: 1px solid rgba(216,189,138,.3);
+
+    padding: 20px;
+}
+
+
+.imagem-placeholder span {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.imagem-placeholder strong {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 32px;
+
+    margin: 10px;
+}
+
+
+.imagem-placeholder small {
+
+    opacity: .6;
+}
+
+
+.drummond-texto .abertura {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    color: #e6d6b7;
+
+    margin-bottom: 25px;
+}
+
+
+.drummond-texto p {
+
+    color: #c8bbb5;
+
+    margin-bottom: 20px;
+}
+
+
+.ficha {
+
+    display: flex;
+
+    gap: 60px;
+
+    border-top: 1px solid rgba(255,255,255,.2);
+
+    padding-top: 25px;
+
+    margin-top: 35px;
+}
+
+
+.ficha div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.ficha span {
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #a99b93;
+}
+
+
+.ficha strong {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+    color: #e6d6b7;
+}
+
+
+.obras {
+
+    margin-top: 100px;
+}
+
+
+.obras h3 {
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+.obras-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.obra {
+
+    padding: 30px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    transition: var(--transicao);
+}
+
+
+.obra:hover {
+
+    border-color: var(--dourado);
+
+    transform: translateY(-5px);
+}
+
+
+.obra span {
+
+    color: var(--dourado);
+
+    font-size: 12px;
+}
+
+
+.obra h4 {
+
+    font-size: 28px;
+
+    margin: 10px 0;
+}
+
+
+.obra p {
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   VOZES
+========================================== */
+
+.vozes {
+
+    background: var(--papel);
+}
+
+
+.vozes-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.voz {
+
+    min-height: 380px;
+
+    padding: 35px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.voz::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        145deg,
+        rgba(0,0,0,.1),
+        rgba(0,0,0,.7)
+    );
+}
+
+
+.voz > * {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.voz-negra {
+
+    background: #34201c;
+}
+
+
+.voz-indigena {
+
+    background: #354437;
+}
+
+
+.voz-feminina {
+
+    background: #603542;
+}
+
+
+.voz-numero {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    color: rgba(255,255,255,.5);
+}
+
+
+.voz h3 {
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+
+.voz p {
+
+    font-size: 13px;
+
+    color: rgba(255,255,255,.8);
+}
+
+
+.ler-mais {
+
+    margin-top: 25px;
+
+    padding: 10px 0;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   LINHA DO TEMPO
+========================================== */
+
+.timeline {
+
+    background: var(--creme);
+}
+
+
+.linha-tempo {
+
+    position: relative;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.linha-tempo::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 28px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background: var(--dourado);
+}
+
+
+.evento {
+
+    display: flex;
+
+    gap: 35px;
+
+    margin-bottom: 60px;
+
+    position: relative;
+}
+
+
+.evento-numero {
+
+    min-width: 57px;
+
+    height: 57px;
+
+    border-radius: 50%;
+
+    background: var(--vinho);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+
+    z-index: 2;
+}
+
+
+.evento-conteudo {
+
+    padding-top: 3px;
+}
+
+
+.evento-conteudo span {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--vinho);
+}
+
+
+.evento-conteudo h3 {
+
+    font-size: 31px;
+
+    margin: 5px 0 8px;
+}
+
+
+.evento-conteudo p {
+
+    color: var(--cinza);
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   ATIVIDADES
+========================================== */
+
+.atividades {
+
+    background: var(--papel);
+}
+
+
+.atividades-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+
+.atividade {
+
+    background: white;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.05);
+
+    transition: var(--transicao);
+}
+
+
+.atividade:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}
+
+
+.atividade-imagem {
+
+    height: 260px;
+}
+
+
+.atividade-imagem .imagem-placeholder {
+
+    min-height: 100%;
+
+    border: none;
+}
+
+
+.atividade-conteudo {
+
+    padding: 30px;
+}
+
+
+.categoria {
+
+    color: var(--vinho);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.atividade h3 {
+
+    font-size: 34px;
+
+    margin: 8px 0;
+}
+
+
+.atividade p {
+
+    color: var(--cinza);
+
+    font-size: 13px;
+}
+
+
+.abrir-atividade {
+
+    margin-top: 20px;
+
+    background: transparent;
+
+    border: none;
+
+    color: var(--vinho);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 700px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+
+    .foto {
+        height: 250px;
+    }
+
+    .foto-grande {
+        grid-row: span 1;
+    }
+
+}
+
+/* ==========================================
+   PRODUÇÕES
+========================================== */
+
+.producoes {
+
+    background: var(--creme);
+}
+
+
+.producao-destaque {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 70px;
+
+    background: var(--papel);
+
+    text-align: center;
+
+    border-top: 3px solid var(--dourado);
+}
+
+
+.aspas-grande {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    color: var(--dourado);
+
+    font-size: 90px;
+
+    line-height: .5;
+}
+
+
+.texto-producao {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 34px;
+
+    font-style: italic;
+
+    margin: 35px 0;
+}
+
+
+.autor-producao {
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: var(--cinza);
+}
+
+
+.producao-botoes {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-top: 30px;
+}
+
+
+.producao-botoes button {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: var(--vinho);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.bolinhas {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.bolinhas span {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #b9afa4;
+}
+
+
+.bolinhas .ativa {
+
+    background: var(--vinho);
+}
+
+
+
+/* ==========================================
+   REFLEXÕES
+========================================== */
+
+.reflexoes {
+
+    background: var(--papel);
+}
+
+
+.reflexao-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.reflexao-texto {
+
+    border-left: 1px solid var(--dourado);
+
+    padding-left: 40px;
+
+    color: var(--cinza);
+
+    font-size: 15px;
+}
+
+
+.reflexao-texto p {
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   ENCERRAMENTO
+========================================== */
+
+.encerramento {
+
+    min-height: 500px;
+
+    background:
+
+        linear-gradient(
+            rgba(57,19,27,.9),
+            rgba(57,19,27,.95)
+        ),
+
+        url("imagens/capa.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+.encerramento-conteudo {
+
+    max-width: 700px;
+
+    padding: 30px;
+}
+
+
+.encerramento h2 {
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    margin-top: 20px;
+}
+
+
+.encerramento p {
+
+    color: #d8bd8a;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.rodape {
+
+    background: #171313;
+
+    color: white;
+
+    padding: 70px 5% 20px;
+}
+
+
+.rodape-conteudo {
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 80px;
+}
+
+
+.rodape-logo h2 {
+
+    font-size: 40px;
+}
+
+
+.rodape-logo h2 span {
+
+    color: var(--dourado);
+
+    font-style: italic;
+}
+
+
+.rodape-logo p {
+
+    color: #888;
+
+    font-size: 12px;
+
+    max-width: 350px;
+}
+
+
+.rodape h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+.rodape-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.rodape-links a {
+
+    color: #999;
+
+    font-size: 12px;
+
+    transition: var(--transicao);
+}
+
+
+.rodape-links a:hover {
+
+    color: var(--dourado);
+}
+
+
+.rodape-info p {
+
+    color: #999;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+
+.rodape-final {
+
+    max-width: 1180px;
+
+    margin: 60px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #332b2b;
+
+    color: #666;
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE - CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    /* CONFIGURAÇÃO GERAL */
+
+    .container {
+        width: 88%;
+    }
+
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .menu {
+        top: 65px;
+
+        padding: 25px 20px;
+    }
+
+
+    .menu a {
+        font-size: 11px;
+
+        padding: 8px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 620px;
+
+        padding: 20px;
+    }
+
+
+    .hero-conteudo {
+        padding: 10px;
+    }
+
+
+    .edicao {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+        line-height: 1.5;
+    }
+
+
+    .hero h1 {
+        font-size: 58px;
+
+        line-height: .9;
+    }
+
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+
+    .linha-decorativa {
+        margin: 25px auto;
+    }
+
+
+    .botao {
+        padding: 13px 22px;
+
+        font-size: 9px;
+    }
+
+
+    /* SEÇÕES */
+
+    .secao {
+        padding: 70px 0;
+    }
+
+
+    /* TÍTULOS */
+
+    .titulo-secao {
+        gap: 12px;
+
+        margin-bottom: 45px;
+    }
+
+
+    .numero {
+        font-size: 40px;
+    }
+
+
+    h2 {
+        font-size: 42px;
+    }
+
+
+    .etiqueta {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* APRESENTAÇÃO */
+
+    .texto {
+        font-size: 14px;
+    }
+
+
+    .texto .destaque {
+        font-size: 25px;
+    }
+
+
+    .citacao {
+        padding: 40px 25px;
+    }
+
+
+    .citacao blockquote {
+        font-size: 27px;
+    }
+
+
+    /* OBJETIVOS */
+
+    .cards-objetivos {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .card-objetivo {
+        padding: 30px 25px;
+    }
+
+
+    /* DRUMMOND */
+
+    .imagem-placeholder {
+        min-height: 320px;
+    }
+
+
+    .drummond-texto .abertura {
+        font-size: 26px;
+    }
+
+
+    .drummond-texto p {
+        font-size: 14px;
+    }
+
+
+    .ficha {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .ficha strong {
+        font-size: 21px;
+    }
+
+
+    .obras {
+        margin-top: 60px;
+    }
+
+
+    .obra {
+        padding: 25px;
+    }
+
+
+    .obra h4 {
+        font-size: 27px;
+    }
+
+
+    /* VOZES */
+
+    .voz {
+        min-height: 350px;
+
+        padding: 30px;
+    }
+
+
+    .voz h3 {
+        font-size: 35px;
+    }
+
+
+    /* LINHA DO TEMPO */
+
+    .linha-tempo::before {
+        left: 22px;
+    }
+
+
+    .evento {
+        gap: 20px;
+
+        margin-bottom: 45px;
+    }
+
+
+    .evento-numero {
+        min-width: 45px;
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 18px;
+    }
+
+
+    .evento-conteudo h3 {
+        font-size: 27px;
+    }
+
+
+    .evento-conteudo p {
+        font-size: 13px;
+    }
+
+
+    /* ATIVIDADES */
+
+    .atividades-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .atividade-imagem {
+        height: 220px;
+    }
+
+
+    .atividade-conteudo {
+        padding: 25px;
+    }
+
+
+    .atividade h3 {
+        font-size: 30px;
+    }
+
+
+    /* GALERIA */
+
+    .galeria-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 240px;
+
+        gap: 10px;
+    }
+
+
+    .foto-grande {
+        grid-row: span 1;
+    }
+
+
+    /* PRODUÇÕES */
+
+    .producao-destaque {
+        padding: 45px 25px;
+    }
+
+
+    .texto-producao {
+        font-size: 27px;
+    }
+
+
+    .producao-botoes {
+        gap: 20px;
+    }
+
+
+    /* REFLEXÕES */
+
+    .reflexao-texto {
+        padding-left: 20px;
+
+        font-size: 14px;
+    }
+
+
+    /* ENCERRAMENTO */
+
+    .encerramento {
+        min-height: 450px;
+
+        padding: 30px 20px;
+    }
+
+
+    .encerramento h2 {
+        font-size: 45px;
+    }
+
+
+    /* RODAPÉ */
+
+    .rodape {
+        padding: 55px 25px 20px;
+    }
+
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .rodape-logo h2 {
+        font-size: 35px;
+    }
+
+
+    /* MODAL */
+
+    .modal {
+        padding: 15px;
+    }
+
+
+    .modal img {
+        max-width: 100%;
+
+        max-height: 80vh;
+    }
+
+
+    .fechar-modal {
+        top: 10px;
+
+        right: 15px;
+
+        font-size: 38px;
+    }
+
+}
+.foto-drummond {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 600px) {
+
+    .foto-drummond {
+        height: 350px;
+    }
+
+}
+
+
+
+/* ==========================================
+   PÁGINA ESPECIAL - VOZES FEMININAS
+========================================== */
+
+.pagina-especial {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 5%;
+}
+
+.especial-introducao {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.especial-introducao h1 {
+    font-size: 70px;
+    margin: 15px 0;
+}
+
+.especial-introducao p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+
+/* IMAGEM */
+
+.imagem-especial {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.imagem-especial img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+
+/* CONTEÚDO */
+
+.conteudo-especial,
+.poema-estudo,
+.autoras {
+    max-width: 1000px;
+    margin: 0 auto 90px;
+}
+
+.conteudo-especial h2,
+.poema-estudo h2,
+.autoras h2 {
+    font-size: 45px;
+    margin: 15px 0 30px;
+}
+
+.conteudo-especial p,
+.poema-estudo p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* REFLEXÃO */
+
+.pergunta-reflexao {
+    margin-top: 40px;
+    padding: 35px;
+    border-left: 5px solid #8b3a3a;
+    background: rgba(139, 58, 58, .08);
+}
+
+.pergunta-reflexao p {
+    margin-bottom: 0;
+}
+
+
+/* AUTORAS */
+
+.autoras-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.autoras-grid article {
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 8px;
+    transition: transform .3s ease;
+}
+
+.autoras-grid article:hover {
+    transform: translateY(-5px);
+}
+
+.autoras-grid h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.autoras-grid p {
+    line-height: 1.6;
+}
+
+
+/* BOTÃO VOLTAR */
+
+.botao-voltar {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .pagina-especial {
+        padding: 50px 20px;
+    }
+
+    .especial-introducao h1 {
+        font-size: 45px;
+    }
+
+    .especial-introducao p {
+        font-size: 16px;
+    }
+
+    .imagem-especial {
+        margin-bottom: 50px;
+    }
+
+    .conteudo-especial h2,
+    .poema-estudo h2,
+    .autoras h2 {
+        font-size: 34px;
+    }
+
+    .conteudo-especial p,
+    .poema-estudo p {
+        font-size: 15px;
+    }
+
+    .autoras-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =====================================================
+   RESPONSIVIDADE — CELULARES E TABLETS
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ---------- CABEÇALHO ---------- */
+
+    .cabecalho {
+        padding: 18px 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .botao-voltar {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+
+    /* ---------- PÁGINAS ESPECIAIS ---------- */
+
+    .pagina-especial {
+        padding: 45px 18px;
+    }
+
+
+    /* ---------- TÍTULO ---------- */
+
+    .especial-introducao {
+        text-align: center;
+    }
+
+    .especial-introducao h1 {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .especial-introducao p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+
+    /* ---------- IMAGEM PRINCIPAL ---------- */
+
+    .imagem-especial {
+        width: 100%;
+        margin: 25px auto;
+    }
+
+    .imagem-especial img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+    }
+
+
+    /* ---------- TEXTOS ---------- */
+
+    .conteudo-especial,
+    .poema-estudo {
+        padding: 25px 20px;
+        margin-top: 25px;
+    }
+
+    .conteudo-especial h2,
+    .poema-estudo h2 {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+    .conteudo-especial p,
+    .poema-estudo p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- CARDS DOS AUTORES ---------- */
+
+    .autoras {
+        padding: 25px 0;
+    }
+
+    .autoras h2 {
+        font-size: 27px;
+        line-height: 1.2;
+        padding: 0 10px;
+    }
+
+    .autoras-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 0 5px;
+    }
+
+    .autoras-grid article {
+        padding: 22px;
+    }
+
+    .autoras-grid article h3 {
+        font-size: 21px;
+    }
+
+    .autoras-grid article p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- ETIQUETAS ---------- */
+
+    .etiqueta {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+
+    /* ---------- CAIXA DE REFLEXÃO ---------- */
+
+    .pergunta-reflexao {
+        padding: 20px;
+        margin-top: 25px;
+    }
+
+    .pergunta-reflexao strong {
+        font-size: 14px;
+    }
+
+    .pergunta-reflexao p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- RODAPÉ ---------- */
+
+    .rodape {
+        text-align: center;
+    }
+
+    .rodape-conteudo {
+        padding: 30px 20px;
+    }
+
+    .rodape-logo h2 {
+        font-size: 24px;
+    }
+
+    .rodape-logo p {
+        font-size: 14px;
+    }
+
+    .rodape-final {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+}
+
+
+
+/* =====================================================
+   CELULARES PEQUENOS
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .pagina-especial {
+        padding: 35px 14px;
+    }
+
+    .especial-introducao h1 {
+        font-size: 32px;
+    }
+
+    .especial-introducao p {
+        font-size: 15px;
+    }
+
+    .conteudo-especial,
+    .poema-estudo {
+        padding: 20px 16px;
+    }
+
+    .conteudo-especial h2,
+    .poema-estudo h2 {
+        font-size: 24px;
+    }
+
+    .conteudo-especial p,
+    .poema-estudo p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .autoras-grid article {
+        padding: 18px;
+    }
+
+    .autoras-grid article h3 {
+        font-size: 19px;
+    }
+
+}
+
+
+
+
+/* =====================================================
+   INFORMAÇÕES
+   ===================================================== */
+
+.info-producao {
+
+    padding: 18px;
+
+}
+
+
+.info-producao h3 {
+
+    margin: 0 0 8px;
+
+    color: #4b2e1f;
+
+    font-size: 20px;
+
+}
+
+
+.info-producao p {
+
+    margin: 0;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+
+    color: #555;
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .grid-producoes {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .galeria-producoes {
+
+        padding: 30px 15px;
+
+    }
+
+    .titulo-galeria h2 {
+
+        font-size: 28px;
+
+    }
+
+    .titulo-galeria p {
+
+        font-size: 15px;
+
+    }
+
+    .grid-producoes {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+    .abrir-imagem img {
+
+        height: auto;
+
+        max-height: 400px;
+
+        object-fit: contain;
+
+    }
+
+}
+/* =====================================================
+   MODAL DE IMAGEM
+   ===================================================== */
+
+.modal-imagem {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.88);
+
+    z-index: 100000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 30px;
+
+}
+
+
+.modal-imagem.aberto {
+
+    display: flex;
+
+}
+
+
+.modal-imagem img {
+
+    max-width: 90%;
+
+    max-height: 80vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.fechar-modal {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #333;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+}
+
+
+#titulo-imagem {
+
+    color: white;
+
+    font-size: 16px;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+}
+/* IMAGEM DAS ATIVIDADES */
+
+.atividade-imagem img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* =====================================================
+   IMAGENS DAS ATIVIDADES
+   ===================================================== */
+
+.atividade-imagem {
+    overflow: hidden;
+}
+
+.atividade-imagem img {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    display: block;
+    object-fit: cover;
+}
+
+.atividade-imagem .imagem-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =====================================================
+   AJUSTES FINAIS — CELULAR
+   ===================================================== */
+
+@media (max-width: 600px) {
+    .atividade-imagem img {
+        min-height: 220px;
+        max-height: 350px;
+    }
+}
+
+
+/* =====================================================
+   ALTO CONTRASTE
+   ===================================================== */
+
+body.alto-contraste {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+body.alto-contraste .secao,
+body.alto-contraste .objetivos,
+body.alto-contraste .apresentacao,
+body.alto-contraste .vozes,
+body.alto-contraste .timeline,
+body.alto-contraste .reflexoes {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+body.alto-contraste p,
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste h4,
+body.alto-contraste a {
+    color: #fff !important;
+}
+
+body.alto-contraste .card-objetivo,
+body.alto-contraste .atividade,
+body.alto-contraste .obra,
+body.alto-contraste .citacao {
+    background: #111 !important;
+    color: #fff !important;
+}
+/* =====================================================
+   MODAL — LER MAIS
+   ===================================================== */
+
+.modal-atividade {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    z-index: 100000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+
+.modal-atividade.aberto {
+
+    display: flex;
+
+}
+
+
+.conteudo-modal-atividade {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    background: #fffaf3;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.conteudo-modal-atividade h2 {
+
+    color: #4b2e1f;
+
+    font-family: Georgia, serif;
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+}
+
+
+.conteudo-modal-atividade p {
+
+    color: #444;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+.fechar-atividade {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #4b2e1f;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+.fechar-atividade:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .conteudo-modal-atividade {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .conteudo-modal-atividade h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .conteudo-modal-atividade p {
+
+        font-size: 15px;
+
+    }
+
+}
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.galeria {
+    background: var(--vinho-escuro);
+    color: white;
+}
+
+.galeria .etiqueta {
+    color: #d8bd8a;
+}
+
+
+/* =====================================================
+   GRADE DA GALERIA
+===================================================== */
+
+.galeria-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+
+}
+
+
+/* =====================================================
+   CADA FOTO
+===================================================== */
+
+.foto {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 260px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #251619;
+
+    border-radius: 6px;
+
+}
+
+
+/* =====================================================
+   IMAGEM
+===================================================== */
+
+.foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    padding: 8px;
+
+    transition: transform 0.4s ease;
+
+}
+
+
+/* Efeito suave ao passar o mouse */
+
+.foto:hover img {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =====================================================
+   SOBREPOSIÇÃO
+===================================================== */
+
+.foto-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(48, 16, 22, 0.70);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+}
+
+
+/* Mostrar sobreposição */
+
+.foto:hover .foto-overlay {
+
+    opacity: 1;
+
+}
+
+
+/* Texto da sobreposição */
+
+.foto-overlay span {
+
+    border: 1px solid #d8bd8a;
+
+    padding: 12px 20px;
+
+    color: white;
+
+    text-transform: uppercase;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =====================================================
+   TABLETS
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .galeria-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+    .foto {
+
+        height: 240px;
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .galeria-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .foto {
+
+        height: 260px;
+
+        width: 100%;
+
+    }
+
+
+    .foto img {
+
+        padding: 6px;
+
+        object-fit: contain;
+
+    }
+
+
+    .foto-overlay {
+
+        opacity: 1;
+
+        background: linear-gradient(
+            transparent,
+            rgba(48, 16, 22, 0.55)
+        );
+
+        align-items: flex-end;
+
+        padding-bottom: 15px;
+
+    }
+
+
+    .foto-overlay span {
+
+        padding: 8px 15px;
+
+        font-size: 8px;
+
+    }
+
+}
+
+/* ==========================================
+   TEXTO DAS PRODUÇÕES
+========================================== */
+
+.texto-producao {
+    white-space: pre-line;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+
+/* TÍTULO DA PRODUÇÃO */
+
+#titulo-producao {
+    margin-bottom: 25px;
+}
+
+
+/* AUTOR */
+
+.autor-producao {
+    margin-top: 30px;
+}
+
+
+/* ==========================================
+   BOTÕES DAS PRODUÇÕES
+========================================== */
+
+.producao-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.producao-botoes button {
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   BOLINHAS
+========================================== */
+
+.bolinhas {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.bolinhas span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #c8c8c8;
+    display: block;
+    transition: 0.3s;
+}
+
+.bolinhas span.ativa {
+    width: 11px;
+    height: 11px;
+    background: #8b5e3c;
+}
+/* ==========================================
+   PRODUÇÕES - SLIDES
+========================================== */
+
+.producao-item {
+    display: none;
+}
+
+.producao-item.ativa {
+    display: block;
+}
