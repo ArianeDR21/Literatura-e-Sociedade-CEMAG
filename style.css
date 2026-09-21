@@ -628,8 +628,8 @@ h3, h4 {
 
         linear-gradient(
             135deg,
-            #3b2225,
-            #201516
+            #23223b,
+            #151520
         );
 
     display: flex;
@@ -1971,7 +1971,7 @@ h3, h4 {
 .pergunta-reflexao {
     margin-top: 40px;
     padding: 35px;
-    border-left: 5px solid #8b3a3a;
+    border-left: 5px solid #453a8b;
     background: rgba(139, 58, 58, .08);
 }
 
